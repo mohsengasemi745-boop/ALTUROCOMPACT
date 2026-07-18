@@ -530,3 +530,27 @@
   footer .foot-links{ display:flex; gap:18px; }
   footer .foot-links a{ color:var(--mist); font-size:0.85rem; text-decoration:none; transition:color .2s; }
   footer .foot-links a:hover{ color:var(--emerald); }
+.whatsapp-float{
+position:fixed;
+bottom:24px;
+right:24px;
+width:64px;
+height:64px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+text-decoration:none;
+box-shadow:0 8px 25px rgba(37,211,102,.45);
+z-index:9999;
+transition:.3s;
+font-size:18px;
+font-weight:bold;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.12);
+box-shadow:0 12px 35px rgba(37,211,102,.7);
+}
