@@ -678,3 +678,44 @@ to{transform:scale(1.12);}
 from{transform:translateY(-20px);}
 to{transform:translateY(30px);}
 }
+.hero-particles{
+position:absolute;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+z-index:-1;
+}
+
+.hero-particles span{
+position:absolute;
+width:6px;
+height:6px;
+background:#2df7b6;
+border-radius:50%;
+box-shadow:0 0 18px #2df7b6;
+animation:float 12s linear infinite;
+opacity:.7;
+}
+
+.hero-particles span:nth-child(1){left:10%;animation-delay:0s;}
+.hero-particles span:nth-child(2){left:22%;animation-delay:2s;}
+.hero-particles span:nth-child(3){left:35%;animation-delay:5s;}
+.hero-particles span:nth-child(4){left:48%;animation-delay:1s;}
+.hero-particles span:nth-child(5){left:60%;animation-delay:6s;}
+.hero-particles span:nth-child(6){left:74%;animation-delay:3s;}
+.hero-particles span:nth-child(7){left:86%;animation-delay:7s;}
+.hero-particles span:nth-child(8){left:95%;animation-delay:4s;}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) scale(.3);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120px) scale(1);
+opacity:0;
+}
+}
