@@ -69,3 +69,22 @@ document.getElementById('year').textContent = new Date().getFullYear();
     }, { threshold: 0.4 });
     counters.forEach(el => cio.observe(el));
   }
+const galleryImages = Array.from(document.querySelectorAll('.photo-item img')).map(img => ({src: img.src, alt: img.alt}));
+let currentLightboxIndex = 0;
+function openLightbox(index){
+  currentLightboxIndex = index;
+  document.getElementById('lightbox-img').src = galleryImages[index].src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e){
+  if(e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')){
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+function navLightbox(e, dir){
+  e.stopPropagation();
+  currentLightboxIndex = (currentLightboxIndex + dir + galleryImages.length) % galleryImages.length;
+  openLightbox(currentLightboxIndex);
+}
