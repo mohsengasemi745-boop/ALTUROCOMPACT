@@ -246,27 +246,63 @@
   </section>
 
   <!-- GALLERY -->
-  <section class="gallery" id="galerie">
-    <div class="wrap section-head">
+  <!-- GALLERY -->
+<section class="gallery-grid-section" id="galerie">
+  <div class="wrap">
+    <div class="section-head">
       <div>
         <div class="eyebrow">Din activitatea noastră</div>
         <h2>Teren, transport, sortare</h2>
       </div>
-      <p>Imagini reale din depozitul nostru din Reșița — de la preluare până la balotare și expediere.</p>
+      <p>Imagini reale din depozitul nostru din Reșița.</p>
     </div>
-    <div class="gallery-viewport">
-      <div class="gallery-track">
-        <div class="gallery-card"><img src="scrap-metal-1.jpg" alt="Depozit de fier vechi și electrocasnice la ALTURO COMPACT, Reșița" loading="lazy"><div class="cap"><span class="label">Fier vechi</span><span class="code">TEREN · FE</span></div></div>
-        <div class="gallery-card"><img src="scrap-metal-2.jpg" alt="Materiale feroase sortate în curtea de colectare" loading="lazy"><div class="cap"><span class="label">Fier greu</span><span class="code">TEREN · FE-G</span></div></div>
-        <div class="gallery-card"><img src="electrocasnice.jpg" alt="Electrocasnice scoase din uz pregătite pentru dezmembrare" loading="lazy"><div class="cap"><span class="label">Electrocasnice</span><span class="code">TEREN · EA</span></div></div>
-        <div class="gallery-card"><img src="depozit-carton.jpg" alt="Depozit cu baloți de carton presat" loading="lazy"><div class="cap"><span class="label">Depozit carton</span><span class="code">HALĂ · CB</span></div></div>
-        <div class="gallery-card" aria-hidden="true"><img src="scrap-metal-1.jpg" alt="" loading="lazy"><div class="cap"><span class="label">Fier vechi</span><span class="code">TEREN · FE</span></div></div>
-        <div class="gallery-card" aria-hidden="true"><img src="scrap-metal-2.jpg" alt="" loading="lazy"><div class="cap"><span class="label">Fier greu</span><span class="code">TEREN · FE-G</span></div></div>
-        <div class="gallery-card" aria-hidden="true"><img src="electrocasnice.jpg" alt="" loading="lazy"><div class="cap"><span class="label">Electrocasnice</span><span class="code">TEREN · EA</span></div></div>
-        <div class="gallery-card" aria-hidden="true"><img src="depozit-carton.jpg" alt="" loading="lazy"><div class="cap"><span class="label">Depozit carton</span><span class="code">HALĂ · CB</span></div></div>
+    <div class="photo-grid">
+      <div class="photo-item" data-reveal onclick="openLightbox(0)">
+        <img src="scrap-metal-1.jpg" alt="Fier vechi" loading="lazy">
+        <div class="photo-caption"><span class="label">Fier vechi</span><span class="code">TEREN · FE</span></div>
+      </div>
+      <div class="photo-item" data-reveal onclick="openLightbox(1)">
+        <img src="scrap-metal-2.jpg" alt="Fier greu" loading="lazy">
+        <div class="photo-caption"><span class="label">Fier greu</span><span class="code">TEREN · FE-G</span></div>
+      </div>
+      <div class="photo-item" data-reveal onclick="openLightbox(2)">
+        <img src="electrocasnice.jpg" alt="Electrocasnice" loading="lazy">
+        <div class="photo-caption"><span class="label">Electrocasnice</span><span class="code">TEREN · EA</span></div>
+      </div>
+      <div class="photo-item" data-reveal onclick="openLightbox(3)">
+        <img src="depozit-carton.jpg" alt="Depozit carton" loading="lazy">
+        <div class="photo-caption"><span class="label">Depozit carton</span><span class="code">HALĂ · CB</span></div>
+      </div>
+      <div class="photo-item" data-reveal onclick="openLightbox(4)">
+        <img src="Alt1.jpg" alt="Din activitatea ALTURO COMPACT" loading="lazy">
+        <div class="photo-caption"><span class="label">Activitate</span><span class="code">01</span></div>
+      </div>
+      <div class="photo-item" data-reveal onclick="openLightbox(5)">
+        <img src="Alt2.jpg" alt="Din activitatea ALTURO COMPACT" loading="lazy">
+        <div class="photo-caption"><span class="label">Activitate</span><span class="code">02</span></div>
+      </div>
+      <div class="photo-item" data-reveal onclick="openLightbox(6)">
+        <img src="Alt3.jpg" alt="Din activitatea ALTURO COMPACT" loading="lazy">
+        <div class="photo-caption"><span class="label">Activitate</span><span class="code">03</span></div>
+      </div>
+      <div class="photo-item" data-reveal onclick="openLightbox(7)">
+        <img src="Alt4.jpg" alt="Din activitatea ALTURO COMPACT" loading="lazy">
+        <div class="photo-caption"><span class="label">Activitate</span><span class="code">04</span></div>
+      </div>
+      <div class="photo-item" data-reveal onclick="openLightbox(8)">
+        <img src="Alt5.jpg" alt="Din activitatea ALTURO COMPACT" loading="lazy">
+        <div class="photo-caption"><span class="label">Activitate</span><span class="code">05</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+  <button class="lightbox-prev" onclick="navLightbox(event,-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-next" onclick="navLightbox(event,1)">›</button>
+</div>
 
   <!-- WHY US -->
   <section id="motive">
